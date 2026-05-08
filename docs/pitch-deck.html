@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bureau — pitch deck</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #0E0F12;
+    --ink-2: #1B1D22;
+    --ink-soft: #3F4148;
+    --paper: #FAFAF8;
+    --paper-2: #F2F0EA;
+    --rule-soft: #C9C4B5;
+    --oxblood: #7A1F2B;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  body { padding: 0; }
+  .deck { display: flex; flex-direction: column; gap: 0; }
+  .slide {
+    min-height: 100vh;
+    padding: clamp(40px, 6vw, 96px);
+    border-bottom: 1px solid var(--ink);
+    display: flex; flex-direction: column;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .slide:nth-child(odd) { background: var(--paper); }
+  .slide:nth-child(even) { background: var(--paper-2); }
+  .slide:nth-child(7) { background: var(--ink); color: var(--paper); }
+  .slide:nth-child(7) .meta { color: rgba(250,250,248,0.6); }
+  .slide:nth-child(7) h2 .under { text-decoration-color: var(--oxblood); }
+  .slide:nth-child(7) p { color: rgba(250,250,248,0.85); }
+  .meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--rule-soft);
+    padding-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  h1 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    margin: 0 0 24px;
+  }
+  h2 {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 600;
+    font-size: clamp(36px, 5vw, 56px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+  .lead {
+    font-family: 'Source Serif 4', serif;
+    font-size: clamp(20px, 2.5vw, 28px);
+    line-height: 1.4;
+    max-width: 60ch;
+    color: var(--ink-2);
+  }
+  p {
+    font-size: 17px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 64ch;
+  }
+  ul { padding-left: 0; list-style: none; }
+  li {
+    border-bottom: 1px solid var(--rule-soft);
+    padding: 14px 0;
+    font-size: 17px;
+    line-height: 1.5;
+    color: var(--ink-2);
+    max-width: 64ch;
+  }
+  .under {
+    text-decoration-line: underline;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 6px;
+    text-decoration-color: currentColor;
+  }
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .tier {
+    border: 1px solid var(--ink);
+    padding: 24px;
+    background: var(--paper);
+  }
+  .tier h3 {
+    font-family: 'Source Serif 4', serif;
+    margin: 0 0 4px;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+  }
+  .tier .price {
+    font-family: 'Source Serif 4', serif;
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .tier .cadence {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--ink-soft);
+  }
+  .nav {
+    position: fixed; top: 12px; right: 12px;
+    background: var(--ink); color: var(--paper);
+    padding: 6px 10px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+  <div class="nav">Slide <span id="cur">1</span> / 10</div>
+  <div class="deck">
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 01</span><span>Title</span></div>
+      <h1>BUREAU.</h1>
+      <p class="lead"><span class="under">Footnoted</span> intelligence. <span class="under">Reseller-ready</span>.</p>
+      <p style="margin-top:24px;font-family:'JetBrains Mono',monospace;font-size:13px;letter-spacing:0.06em;color:var(--ink-soft);">A research syndicate · Wave 2 · 2026-W19</p>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 02</span><span>Problem</span></div>
+      <h2>Thursday-night <span class="under">Federal Register</span> crawls.</h2>
+      <p>Boutique vertical analysts spend Thursday night reading 8 to 15 regulator gazettes to be ready for Friday. Bloomberg is for traders. Substack is unsourceable. Google Alerts is duplicate-spam. The result: a senior partner re-keys footnotes from blog posts at 06:00 on Friday morning.</p>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 03</span><span>Product</span></div>
+      <h2>A weekly <span class="under">dossier</span> per regulated <span class="under">vertical</span>.</h2>
+      <p>Each claim mapped to a primary source via a dossier-ID like <code style="font-family:'JetBrains Mono',monospace;color:var(--oxblood);">§ FED-25-1144</code>. Five verticals at launch:</p>
+      <ul>
+        <li>Fintech regulations &mdash; FED, OCC, CFPB, ESMA, FDIC</li>
+        <li>Biotech grants &mdash; NIH, BARDA, EMA, EU Horizon</li>
+        <li>Govtech procurement &mdash; SAM.gov, TED.eu, GSA OASIS</li>
+        <li>Climate-tech disclosures &mdash; CSRD, DOE CDR, METI CC</li>
+        <li>Semiconductor export controls &mdash; BIS, MOFCOM, EU CHIPS</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 04</span><span>Why now</span></div>
+      <h2>Three <span class="under">shifts</span> in 2026.</h2>
+      <ul>
+        <li>AI-summarizers have flooded the market with un-cited &ldquo;intelligence&rdquo;, driving demand for verifiable editorial.</li>
+        <li>Regulator volume has roughly doubled since 2023; the manual-crawl-on-Thursday-night problem is worse than ever.</li>
+        <li>Boutique consultancies have re-staffed analyst desks post-2024 vendor layoffs, looking for an editorial back-end.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 05</span><span>Reseller move</span></div>
+      <h2>One <span class="under">body</span>. Two <span class="under">mastheads</span>.</h2>
+      <p>We re-render every issue with the reseller&rsquo;s wordmark, accent, logo, and footer line. The body stays byte-identical. A vertical-SaaS partnerships team gets editorial-grade content under their brand without writing it. We get distribution.</p>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 06</span><span>Business model</span></div>
+      <h2>Three <span class="under">rails</span>. Crypto-only checkout.</h2>
+      <div class="pricing-grid">
+        <div class="tier">
+          <h3>Single</h3>
+          <div class="price">$499</div>
+          <div class="cadence">per vertical / month</div>
+        </div>
+        <div class="tier" style="border-color:var(--oxblood);">
+          <h3>Bundle</h3>
+          <div class="price"><span class="under">$1,499</span></div>
+          <div class="cadence">all five verticals / month</div>
+        </div>
+        <div class="tier">
+          <h3>Reseller</h3>
+          <div class="price">$4,800</div>
+          <div class="cadence">setup + $1,200 / added vertical</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 07</span><span>Methodology</span></div>
+      <h2><span class="under">Sourcing</span> &middot; dedupe &middot; footnote &middot; <span class="under">ship</span>.</h2>
+      <p>Each issue publishes its dedupe ratio &mdash; typically 12:1 to 20:1. We read 200 to 400; you read 20. All sources are public. All claims footnoted. Leak-provenance policy is documented. No retractions in the active 2026 W12&ndash;W19 period.</p>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 08</span><span>Traction</span></div>
+      <h2><span class="under">Year 1</span> targets.</h2>
+      <ul>
+        <li>Wave 2 launch live: 2026-W19. Landing at info-aggregator-reseller.prin7r.com.</li>
+        <li>Day-90 target: 6 paid subscribers, 1 reseller-license live.</li>
+        <li>Year-1 target: 60 subscribers, 8 reseller-licenses, $530k ARR.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 09</span><span>Team</span></div>
+      <h2>One <span class="under">editorial desk</span>, one <span class="under">infra spine</span>.</h2>
+      <p>Wave 2 ships with a single editorial desk (Bureau house-name) backed by the Prin7r Projects ingest + render infrastructure. Wave 3 hire plan: a second analyst at month 6, a partnerships lead at month 9.</p>
+    </section>
+
+    <section class="slide">
+      <div class="meta"><span>§ B-DECK-26 · Slide 10</span><span>Ask</span></div>
+      <h2>No <span class="under">round</span>. Resellers and subscribers.</h2>
+      <p>Bureau is bootstrapped from the Prin7r Wave 2 build. We are not raising in 2026. Resellers and subscribers are how we grow. To partner: hello@info-aggregator-reseller.prin7r.com.</p>
+      <p style="margin-top:48px;font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--ink-soft);">END OF DECK &middot; § B-DECK-26 &middot; Set in Source Serif 4 &middot; Inter &middot; JetBrains Mono</p>
+    </section>
+
+  </div>
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const cur = document.getElementById('cur');
+    const obs = new IntersectionObserver((entries) => {
+      for (const e of entries) {
+        if (e.isIntersecting) {
+          const i = Array.from(slides).indexOf(e.target) + 1;
+          cur.textContent = String(i);
+        }
+      }
+    }, { threshold: 0.5 });
+    slides.forEach(s => obs.observe(s));
+  </script>
+</body>
+</html>
