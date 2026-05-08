@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ink: #0E0F12;
+  --paper: #FAFAF8;
+  --oxblood: #7A1F2B;
+  --rule-soft: #C9C4B5;
+}
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+body {
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+/* Editorial underline-as-emphasis (per DESIGN.md §5) */
+.under {
+  text-decoration-line: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 6px;
+  text-decoration-skip-ink: none;
+  text-decoration-color: currentColor;
+}
+
+@media (max-width: 640px) {
+  .under {
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+  }
+}
+
+/* Footnote sup */
+.fn {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.62em;
+  line-height: 0;
+  vertical-align: super;
+  color: var(--oxblood);
+  margin: 0 0.05em;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Text-rendering nicety for the dossier excerpt */
+.dossier-body p {
+  text-wrap: pretty;
+  hanging-punctuation: first last;
+}

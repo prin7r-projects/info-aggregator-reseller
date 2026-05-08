@@ -1,0 +1,15 @@
+services:
+  landing:
+    build:
+      context: .
+      dockerfile: Dockerfile.landing
+    restart: unless-stopped
+    env_file: .env
+    expose:
+      - "3000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.info-aggregator-reseller.rule=Host(`info-aggregator-reseller.prin7r.com`)"
+      - "traefik.http.routers.info-aggregator-reseller.entrypoints=websecure"
+      - "traefik.http.routers.info-aggregator-reseller.tls.certresolver=letsencrypt"
+      - "traefik.http.services.info-aggregator-reseller.loadbalancer.server.port=3000"
