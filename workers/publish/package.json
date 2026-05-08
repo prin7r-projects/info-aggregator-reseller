@@ -1,0 +1,19 @@
+{
+  "name": "@annotedly/worker-publish",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Annotedly publish worker — formats processed items for distribution (RSS, JSON API, email digests, reseller bundles)",
+  "scripts": {
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
