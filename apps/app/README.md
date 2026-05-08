@@ -1,7 +1,12 @@
-# Annotedly — SaaS app scaffold (placeholder)
+# <YOUR_APP_NAME>
 
-This directory is reserved for the Annotedly dashboard application — the surface where subscribers read issues, download CSV/JSON feeds, configure their reseller masthead, and manage their billing.
+Built with [Wasp](https://wasp.sh), based on the [Open Saas](https://opensaas.sh) template.
 
-For Wave 2 (build 2026-05-08) the app is intentionally **not implemented**. The full application build comes in a later wave and will fork [`wasp-lang/open-saas`](https://github.com/wasp-lang/open-saas) per the playbook stack matrix for `saas` projects.
+## Development
 
-The Wave 2 deliverable for Annotedly is the marketing landing under `apps/landing/` plus the NOWPayments checkout flow that creates a hosted invoice for subscribers. That flow stops at invoice creation — fulfillment (issuing credentials and provisioning the dashboard) is the responsibility of the post-Wave-2 SaaS app build.
+### Running locally
+
+- Make sure you have the `.env.client` and `.env.server` files with correct dev values in the root of the project.
+- Run the database with `wasp start db` and leave it running.
+- Run `wasp start` and leave it running.
+- [OPTIONAL]: If this is the first time starting the app, or you've just made changes to your entities/prisma schema, also run `wasp db migrate-dev`.
