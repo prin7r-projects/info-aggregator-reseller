@@ -34,7 +34,7 @@ export function InsideAnIssue() {
             Inside an issue — four stages
           </h2>
           <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-            B-METH-26
+            An-METH-26
           </span>
         </div>
 

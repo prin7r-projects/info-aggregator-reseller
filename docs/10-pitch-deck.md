@@ -4,7 +4,7 @@ A 10-slide deck. The matching `pitch-deck.html` next to this file renders the sa
 
 ## 1 — Title
 
-**BUREAU.**
+**ANNOTEDLY.**
 Footnoted intelligence. Reseller-ready.
 *A research syndicate.*
 
@@ -49,8 +49,8 @@ Sourcing → dedupe → footnote → ship. Each issue publishes its dedupe ratio
 
 ## 9 — Team
 
-Wave 2: a single editorial desk (Bureau house-name) backed by the Prin7r Projects ingest + render infrastructure. Wave 3 hire plan: a second analyst at month 6, a partnerships lead at month 9.
+Wave 2: a single editorial desk (Annotedly house-name) backed by the Prin7r Projects ingest + render infrastructure. Wave 3 hire plan: a second analyst at month 6, a partnerships lead at month 9.
 
 ## 10 — Ask
 
-Bureau is bootstrapped from the Prin7r Wave 2 build. We are not raising in 2026. Resellers and subscribers are how we grow. To partner: `hello@info-aggregator-reseller.prin7r.com`.
+Annotedly is bootstrapped from the Prin7r Wave 2 build. We are not raising in 2026. Resellers and subscribers are how we grow. To partner: `hello@info-aggregator-reseller.prin7r.com`.

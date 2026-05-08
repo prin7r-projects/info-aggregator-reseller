@@ -33,7 +33,7 @@ export async function POST(request: Request) {
     return NextResponse.json({ ok: false, reason: "invalid_json" }, { status: 400 });
   }
 
-  // [BUREAU_NOWPAYMENTS_WEBHOOK] received
+  // [ANNOTEDLY_NOWPAYMENTS_WEBHOOK] received
   if (!signature || !secret) {
     return NextResponse.json(
       { ok: false, reason: "missing_signature_or_secret" },
@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       : "unknown";
 
   // Wave 2: log only. Fulfilment is the responsibility of the post-Wave-2 SaaS app.
-  // [BUREAU_NOWPAYMENTS_WEBHOOK] verified=true order_id=<orderId> status=<status>
+  // [ANNOTEDLY_NOWPAYMENTS_WEBHOOK] verified=true order_id=<orderId> status=<status>
 
   return NextResponse.json({
     ok: true,

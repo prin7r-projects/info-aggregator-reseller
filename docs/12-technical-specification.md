@@ -1,8 +1,8 @@
 # 12 — Technical Specification
 
-This is the authoritative technical contract for Bureau Wave 2 → Wave 3. Doc 11 specifies user-visible flows; this doc specifies runtime, schema, contracts, and operational guardrails. Every endpoint here traces back to a story in doc 11.
+This is the authoritative technical contract for Annotedly Wave 2 → Wave 3. Doc 11 specifies user-visible flows; this doc specifies runtime, schema, contracts, and operational guardrails. Every endpoint here traces back to a story in doc 11.
 
-Bureau is a content-aggregation product with editorial-integrity guarantees: ingest → dedupe → footnote → triage → publish. Multi-tenant rendering at publish time produces per-reseller customizations.
+Annotedly is a content-aggregation product with editorial-integrity guarantees: ingest → dedupe → footnote → triage → publish. Multi-tenant rendering at publish time produces per-reseller customizations.
 
 ---
 
@@ -85,7 +85,7 @@ export const subscribers = pgTable('subscribers', {
 });
 
 export const subscriptions = pgTable('subscriptions', {
-  id: text('id').primaryKey(),  // 'bureau_single_<ts>_<rand>'
+  id: text('id').primaryKey(),  // 'annotedly_single_<ts>_<rand>'
   subscriberId: uuid('subscriber_id').references(() => subscribers.id),
   tier: text('tier').notNull(),   // 'single'|'bundle'|'reseller'
   vertical: text('vertical'),     // for 'single'
@@ -99,7 +99,7 @@ export const subscriptions = pgTable('subscriptions', {
 });
 
 export const issues = pgTable('issues', {
-  id: text('id').primaryKey(),  // 'B-2026-W19-fintech'
+  id: text('id').primaryKey(),  // 'An-2026-W19-fintech'
   vertical: text('vertical').notNull(),
   weekStart: date('week_start').notNull(),
   publishedAt: timestamp('published_at'),
@@ -119,7 +119,7 @@ export const sources = pgTable('sources', {
 });
 
 export const dossierItems = pgTable('dossier_items', {
-  id: text('id').primaryKey(),  // 'B-2026-W19-§14'
+  id: text('id').primaryKey(),  // 'An-2026-W19-§14'
   issueId: text('issue_id').references(() => issues.id),
   sourceId: text('source_id').references(() => sources.id),
   paragraphMarkdown: text('paragraph_markdown').notNull(),
@@ -248,9 +248,9 @@ Top 5 threats + mitigations:
 2. **Feed scraping.** *Mitigation:* Per-subscriber HMAC-signed URL with 30-day rotation; 60 req/min rate limit; anomaly alerting.
 3. **Libel from leaked documents.** *Mitigation:* Provenance verification before publish; 24+ hour subject notice; comment-from-subject mechanism; retraction protocol.
 4. **Editorial-integrity attack (compromised LLM tiebreak).** *Mitigation:* Tiebreaks reviewed by editorial desk on Thursday triage; SimHash baseline always available.
-5. **Reseller masthead misuse (claiming Bureau editorial).** *Mitigation:* License terms forbid; co-branded methodology page documents the relationship; Bureau retains editorial control.
+5. **Reseller masthead misuse (claiming Annotedly editorial).** *Mitigation:* License terms forbid; co-branded methodology page documents the relationship; Annotedly retains editorial control.
 
-CSRF: Next.js + samesite. CORS: locked to Bureau domain + custom-domain resellers (per-reseller allowlist).
+CSRF: Next.js + samesite. CORS: locked to Annotedly domain + custom-domain resellers (per-reseller allowlist).
 
 ---
 
@@ -259,7 +259,7 @@ CSRF: Next.js + samesite. CORS: locked to Bureau domain + custom-domain reseller
 - **Logs.** Stdout JSON `{ ts, level, route, event, message }`. PII scrubbed.
 - **Metrics.** Wave 3: ingestion lag per source, dedupe-ratio per issue, feed RPS per subscriber, retraction count.
 - **Alerts.**
-  - Webhook sig failures >2/h → Slack `#alerts-bureau`.
+  - Webhook sig failures >2/h → Slack `#alerts-annotedly`.
   - Source quarantined → editorial desk email.
   - Dedupe ratio anomaly (>50% drop or rise) → Slack.
   - Reseller delivery endpoint failures → Slack + email reseller.

@@ -8,7 +8,7 @@ export function Methodology() {
               Methodology
             </p>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-paper/60">
-              § B-SRC-26
+              § An-SRC-26
             </p>
           </div>
           <blockquote className="lg:col-span-8 font-serif text-[28px] leading-[1.25] tracking-[-0.02em] md:text-[36px] text-paper">

@@ -2,7 +2,7 @@
 
 ## Codename
 
-**Bureau** — a research syndicate. Closer to a regulator&rsquo;s docket cover or a regional broadsheet&rsquo;s masthead than to an AI-product landing page.
+**Annotedly** — a research syndicate. Closer to a regulator&rsquo;s docket cover or a regional broadsheet&rsquo;s masthead than to an AI-product landing page.
 
 ## Brand pyramid
 
@@ -13,7 +13,7 @@
 
 ## Positioning statement
 
-> For boutique consultancies and partnership leads who already publish weekly notes to paying clients, **Bureau** is a vertical-intelligence subscription that delivers a footnoted, white-labelable dossier on a single regulated vertical — unlike Bloomberg Terminal seats and unfiltered Twitter scrapes, because every paragraph has a source-ID an analyst can hand to her partner without re-keying.
+> For boutique consultancies and partnership leads who already publish weekly notes to paying clients, **Annotedly** is a vertical-intelligence subscription that delivers a footnoted, white-labelable dossier on a single regulated vertical — unlike Bloomberg Terminal seats and unfiltered Twitter scrapes, because every paragraph has a source-ID an analyst can hand to her partner without re-keying.
 
 ## Audience persona
 
@@ -66,15 +66,15 @@ Plus two restricted categorical tag colors used only for vertical labels: `--oli
 
 ### Logo concept
 
-A square ink seal stamp with the wordmark `BUREAU` in Inter Bold, an oxblood underline at 1px under the &ldquo;U&rdquo;, and a JetBrains Mono dossier-number stamp (`§ B-2026-W19`) to the right of the wordmark.
+A square ink seal stamp with the wordmark `ANNOTEDLY` in Inter Bold, an oxblood underline at 1px under the &ldquo;O&rdquo;, and a JetBrains Mono dossier-number stamp (`§ An-2026-W19`) to the right of the wordmark.
 
 ```svg
 <svg width="220" height="56" viewBox="0 0 220 56" xmlns="http://www.w3.org/2000/svg">
   <rect x="0" y="0" width="56" height="56" fill="#0E0F12"/>
-  <text x="28" y="36" font-family="Inter, sans-serif" font-weight="700" font-size="28" fill="#FAFAF8" text-anchor="middle" letter-spacing="-0.04em">B</text>
+  <text x="28" y="36" font-family="Inter, sans-serif" font-weight="700" font-size="22" fill="#FAFAF8" text-anchor="middle" letter-spacing="-0.04em">An</text>
   <rect x="14" y="42" width="28" height="2" fill="#7A1F2B"/>
-  <text x="68" y="34" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#0E0F12" letter-spacing="-0.02em">BUREAU</text>
-  <text x="156" y="33" font-family="JetBrains Mono, monospace" font-weight="500" font-size="11" fill="#3F4148" letter-spacing="0.18em">§ B-2026</text>
+  <text x="68" y="34" font-family="Inter, sans-serif" font-weight="700" font-size="20" fill="#0E0F12" letter-spacing="-0.02em">ANNOTEDLY</text>
+  <text x="156" y="33" font-family="JetBrains Mono, monospace" font-weight="500" font-size="11" fill="#3F4148" letter-spacing="0.18em">§ An-2026</text>
 </svg>
 ```
 

@@ -60,7 +60,7 @@ export function CoverageStrip() {
             Coverage — five verticals
           </h2>
           <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-            B-COV-26-V1
+            An-COV-26-V1
           </span>
         </div>
 

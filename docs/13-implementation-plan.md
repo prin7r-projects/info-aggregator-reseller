@@ -1,6 +1,6 @@
 # 13 — Implementation Plan
 
-> **Hand-off ready.** This plan is for the Phase 2 implementation agent picking up Bureau after Wave 2's marketing landing has shipped. You will find: (a) deployed landing at `https://info-aggregator-reseller.prin7r.com` with NOWPayments hosted-invoice checkout wired and verified; (b) brand identity / audience / architecture in `/docs/01..10-*.md`; (c) the user-story contract in `/docs/11-user-stories-and-scenarios.md`; (d) the technical spec in `/docs/12-technical-specification.md`. Wave 3 brings the editorial pipeline online: Sun-Fri ingestion → dedupe → triage → publish, plus per-subscriber feeds and per-reseller white-labeling. Read docs 11 + 12 before any phase. **The hardest engineering problem is editorial integrity at scale**: a 17:1 dedupe ratio that holds up to a partner's audit. Don't shortcut the source-attribution chain.
+> **Hand-off ready.** This plan is for the Phase 2 implementation agent picking up Annotedly after Wave 2's marketing landing has shipped. You will find: (a) deployed landing at `https://info-aggregator-reseller.prin7r.com` with NOWPayments hosted-invoice checkout wired and verified; (b) brand identity / audience / architecture in `/docs/01..10-*.md`; (c) the user-story contract in `/docs/11-user-stories-and-scenarios.md`; (d) the technical spec in `/docs/12-technical-specification.md`. Wave 3 brings the editorial pipeline online: Sun-Fri ingestion → dedupe → triage → publish, plus per-subscriber feeds and per-reseller white-labeling. Read docs 11 + 12 before any phase. **The hardest engineering problem is editorial integrity at scale**: a 17:1 dedupe ratio that holds up to a partner's audit. Don't shortcut the source-attribution chain.
 
 ---
 
@@ -54,7 +54,7 @@
 1. Drizzle schema per doc 12 §2.
 2. Ingest worker: cron + RSS + HTTP polling per `data/sources/fintech.json`. Stores raw in `sources` with SHA-256.
 3. Process worker: SimHash dedupe + LLM tiebreak (OpenRouter / Anthropic) + cluster output → `dossierItems` candidates.
-4. Footnote ledger: assigns `B-{year}-W{week}-§{n}` IDs.
+4. Footnote ledger: assigns `An-{year}-W{week}-§{n}` IDs.
 5. Editorial triage admin UI `/admin/triage`: list candidates, mark keep/discard/merge/flag-for-comment.
 6. Publish worker Fri 09:00 ET: PDF render via Playwright (HTML → PDF), email send via Postmark, JSON+CSV feed update.
 7. Dedupe-ratio calculation surfaced in admin dashboard + public methodology page.
@@ -111,19 +111,19 @@
 1. Persist subscriptions on `POST /api/checkout/nowpayments`.
 2. Webhook activates sub, mints feedToken, sends welcome email (this week's issue replay + feed URL + tracked-log link).
 3. Sample request flow: form → editorial desk Postmark + Telegram ping.
-4. Notion sync: paid subscriptions → `Bureau Subscriptions` data source.
+4. Notion sync: paid subscriptions → `Annotedly Subscriptions` data source.
 5. Subscription renewal: NOWPayments lacks recurring; email fresh invoice 5 days before `validUntil`.
 
 **Effort.** M — 100-180 tool-uses, 2-3 days.
 
 **DoD.**
 - [ ] $499 Single fintech purchase end-to-end: invoice → IPN → sub active → welcome email + replay + tracked log.
-- [ ] Notion `Bureau Subscriptions` row appears.
+- [ ] Notion `Annotedly Subscriptions` row appears.
 - [ ] Sample request triggers desk email within 30s.
 - [ ] Renewal invoice email goes out at `validUntil - 5d`.
 
 **Hand-off context.**
-- Welcome email is the customer's first impression of Bureau's editorial voice. Have editorial desk write the template.
+- Welcome email is the customer's first impression of Annotedly's editorial voice. Have editorial desk write the template.
 
 ---
 
@@ -147,7 +147,7 @@
 **DoD.**
 - [ ] Idempotency: same body 5x = ONE invoice.
 - [ ] Forged IPN bad sig = 401.
-- [ ] Slack `#alerts-bureau` receives test messages.
+- [ ] Slack `#alerts-annotedly` receives test messages.
 - [ ] CSP header on every response.
 - [ ] Leak protocol drilled with editorial desk in a tabletop exercise.
 
@@ -164,7 +164,7 @@
 1. Add 4 more verticals (biotech, govtech, climate, semis) to ingest + process. Each has its own `data/sources/<vertical>.json`.
 2. Bundle subscriber feed: combined JSON+CSV across all 5 verticals; cross-vertical index in week 4.
 3. Reseller config: persist in `resellerConfigs`. Render Friday issue with custom masthead + accent + footer + delivery endpoint + lag.
-4. Custom domain support: `eco-dispatch.com` resolves Bureau-rendered issues with reseller's branding.
+4. Custom domain support: `eco-dispatch.com` resolves Annotedly-rendered issues with reseller's branding.
 5. Reseller dashboard `/app/reseller`: subscriber list, issue history, customizations.
 
 **Effort.** L — 200-350 tool-uses, 3-5 days.

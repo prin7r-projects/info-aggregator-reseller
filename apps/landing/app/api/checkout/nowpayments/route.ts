@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
 const PLANS = {
-  single: { amount: 499, name: "Bureau · Single vertical (1 month)" },
-  bundle: { amount: 1499, name: "Bureau · Bundle — all five verticals (1 month)" },
-  reseller: { amount: 4800, name: "Bureau · Reseller license (setup)" },
+  single: { amount: 499, name: "Annotedly · Single vertical (1 month)" },
+  bundle: { amount: 1499, name: "Annotedly · Bundle — all five verticals (1 month)" },
+  reseller: { amount: 4800, name: "Annotedly · Reseller license (setup)" },
 } as const;
 
 type PlanId = keyof typeof PLANS;
@@ -23,10 +23,10 @@ export async function POST(request: Request) {
     process.env.NEXT_PUBLIC_APP_URL ??
     new URL("/", request.url).origin;
 
-  const orderId = `bureau-${body.plan}-${Date.now().toString(36)}`;
+  const orderId = `annotedly-${body.plan}-${Date.now().toString(36)}`;
 
   if (!apiKey) {
-    // [BUREAU_PAYMENT_DEBUG] checkout endpoint — no NOWPAYMENTS_API_KEY in env, returning mock URL
+    // [ANNOTEDLY_PAYMENT_DEBUG] checkout endpoint — no NOWPAYMENTS_API_KEY in env, returning mock URL
     return NextResponse.json({
       checkoutUrl: `${baseUrl}/?status=mock&order=${orderId}`,
       orderId,
@@ -58,7 +58,7 @@ export async function POST(request: Request) {
 
   if (!r.ok) {
     const text = await r.text();
-    // [BUREAU_PAYMENT_DEBUG] NOWPayments invoice failed
+    // [ANNOTEDLY_PAYMENT_DEBUG] NOWPayments invoice failed
     return NextResponse.json(
       { error: `NOWPayments invoice creation failed (${r.status}): ${text.slice(0, 240)}` },
       { status: 502 },

@@ -24,16 +24,16 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Bureau — footnoted intelligence for vertical analysts",
+  title: "Annotedly — footnoted intelligence for vertical analysts",
   description:
     "A weekly cross-source dossier per vertical (fintech, biotech, govtech, climate-tech, semiconductors). White-labeled for consultancies and partner firms.",
   metadataBase: new URL("https://info-aggregator-reseller.prin7r.com"),
   openGraph: {
-    title: "Bureau — footnoted intelligence for vertical analysts",
+    title: "Annotedly — footnoted intelligence for vertical analysts",
     description:
       "Weekly cross-source dossier per vertical. Resellable. Footnoted. Built for analysts who refuse to forward un-cited summaries.",
     url: "https://info-aggregator-reseller.prin7r.com",
-    siteName: "Bureau",
+    siteName: "Annotedly",
     type: "website",
   },
 };

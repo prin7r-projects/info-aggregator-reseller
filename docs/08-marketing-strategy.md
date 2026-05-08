@@ -8,7 +8,7 @@
 
 **Category we&rsquo;re creating.** *Editorial-grade intelligence subscriptions.* Not market data, not news aggregation, not summary newsletters — a category that sits between Bloomberg Terminal and a boutique-consultancy weekly note.
 
-**Anti-positioning.** Bureau is *not* an &ldquo;AI research platform&rdquo; with infinite content. Bureau is *not* a Bloomberg-Terminal alternative for traders. Bureau is *not* a generic newsletter SaaS. Bureau is the editorial back-end behind a small number of named firms.
+**Anti-positioning.** Annotedly is *not* an &ldquo;AI research platform&rdquo; with infinite content. Annotedly is *not* a Bloomberg-Terminal alternative for traders. Annotedly is *not* a generic newsletter SaaS. Annotedly is the editorial back-end behind a small number of named firms.
 
 ## Messaging hierarchy
 
@@ -18,7 +18,7 @@
 - *Three rails. Crypto-only checkout — USDT or USDC.* (pricing)
 
 ### Subhead tier
-- *Each Friday, Bureau ships a dossier on a single regulated vertical.*
+- *Each Friday, Annotedly ships a dossier on a single regulated vertical.*
 - *We deduplicate everything before it ships.*
 - *Resellers ship the same dossier under their own masthead.*
 
@@ -35,7 +35,7 @@
 
 ## Content pillars
 
-1. **Methodology content (40%).** Long-form on sourcing, dedupe rules, leak-provenance verification, footnoting policy. Cross-posted from the Bureau site to Substack and LinkedIn.
+1. **Methodology content (40%).** Long-form on sourcing, dedupe rules, leak-provenance verification, footnoting policy. Cross-posted from the Annotedly site to Substack and LinkedIn.
 2. **&ldquo;What we deduplicated this week&rdquo; (30%).** A brief LinkedIn / Substack post each fortnight: the input count, the output count, three deduped examples. Builds the editorial credibility of the brand.
 3. **Vertical roadmap (15%).** Quarterly post on which verticals we&rsquo;re adding next and why. Solicits suggestions from existing subscribers.
 4. **Reseller spotlights (10%).** Once a reseller has been live for 90 days, a co-authored case study (with their permission) on their distribution list and what changed.
@@ -47,9 +47,9 @@ The marketing strategy is tightly coupled to the channels in `06-sales-channels.
 
 ## Brand guidelines (see `01-brand-identity.md` and `/DESIGN.md`)
 
-- All marketing surfaces use the Bureau type system (Source Serif 4 / Inter / JetBrains Mono).
+- All marketing surfaces use the Annotedly type system (Source Serif 4 / Inter / JetBrains Mono).
 - All headlines emphasize selected nouns with a thick text-decoration underline; never use color or italic for emphasis.
-- Source-IDs always use mono and the `§ B-SRC-26` format.
+- Source-IDs always use mono and the `§ An-SRC-26` format.
 - Imagery is restricted — no stock photos, no AI orbs, no people-in-suits.
 - Voice is editorial, restrained, specific. Never &ldquo;AI-powered&rdquo;, &ldquo;intelligence platform&rdquo;, or &ldquo;next-generation&rdquo;.
 
@@ -76,4 +76,4 @@ The marketing strategy is tightly coupled to the channels in `06-sales-channels.
 - LinkedIn long-form post → sample-request conversion: 8%.
 - Direct-outreach → 20-min-call conversion: 12%.
 - Methodology essay → backlinks from analyst-of-analysts publications: 3 by month 12.
-- Brand-search volume (&ldquo;Bureau intelligence dossier&rdquo;): trackable by month 12.
+- Brand-search volume (&ldquo;Annotedly intelligence dossier&rdquo;): trackable by month 12.

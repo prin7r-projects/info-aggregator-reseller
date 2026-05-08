@@ -56,7 +56,7 @@ const plans: Plan[] = [
     features: [
       "Re-mastheaded copy, your logo + accent",
       "Custom URL, email-from, and footer line",
-      "Methodology page co-branded with Bureau",
+      "Methodology page co-branded with Annotedly",
       "Up to 3 verticals at launch; add more anytime",
     ],
     cta: "Open license — Reseller",
@@ -97,7 +97,7 @@ export function Pricing() {
             Pricing — three rails
           </h2>
           <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-            B-PRC-26
+            An-PRC-26
           </span>
         </div>
 

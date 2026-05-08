@@ -11,7 +11,7 @@ Six pain points the target persona has *today*, each tied to a specific failure 
 - *Westlaw* and *PACER* are query interfaces, not pushed digests. You have to know what to look for.
 - *Substack newsletters* often summarize the same three rulings everyone summarized; analysts cannot defend a quotation from a Substack to a senior partner.
 
-**Bureau response.** A vertical-scoped weekly dossier with primary-source footnote IDs. The analyst can hand the paragraph to the partner unaltered.
+**Annotedly response.** A vertical-scoped weekly dossier with primary-source footnote IDs. The analyst can hand the paragraph to the partner unaltered.
 
 ## 2. Dedupe debt
 
@@ -22,7 +22,7 @@ Six pain points the target persona has *today*, each tied to a specific failure 
 - *Feedly Pro AI* claims to dedupe; in practice it groups same-day URLs only and misses paraphrased coverage 24h later.
 - *Inoreader* dedupe is link-based, not content-based.
 
-**Bureau response.** A SimHash + LLM-assisted clustering pass before the issue goes out. Each issue publishes its dedupe ratio (e.g. 17:1 means 412 read down to 24).
+**Annotedly response.** A SimHash + LLM-assisted clustering pass before the issue goes out. Each issue publishes its dedupe ratio (e.g. 17:1 means 412 read down to 24).
 
 ## 3. Provenance laundering
 
@@ -33,7 +33,7 @@ Six pain points the target persona has *today*, each tied to a specific failure 
 - *Telegram* leak channels do not maintain provenance; first-mention is rarely tracked.
 - *Discord* archives are private; impossible to cite externally.
 
-**Bureau response.** Leaked documents are accepted only with verifiable provenance — a credible chain of custody, a screenshot with metadata, or independent confirmation. Each leak gets a `LEAK-` prefix in its dossier-ID and a separate footnote on the chain.
+**Annotedly response.** Leaked documents are accepted only with verifiable provenance — a credible chain of custody, a screenshot with metadata, or independent confirmation. Each leak gets a `LEAK-` prefix in its dossier-ID and a separate footnote on the chain.
 
 ## 4. Reseller content debt
 
@@ -44,7 +44,7 @@ Six pain points the target persona has *today*, each tied to a specific failure 
 - *Repackaging analyst-firm content* (Gartner, Forrester) — usage rights are restrictive and the brand is loud.
 - *Newsletter-builder SaaS (beehiiv, Substack)* — solves distribution, not content.
 
-**Bureau response.** A reseller-license tier where the body of every issue is byte-identical, only the masthead and footer change. Resellers ship editorial content under their own brand without writing it.
+**Annotedly response.** A reseller-license tier where the body of every issue is byte-identical, only the masthead and footer change. Resellers ship editorial content under their own brand without writing it.
 
 ## 5. Source-list opacity
 
@@ -54,7 +54,7 @@ Six pain points the target persona has *today*, each tied to a specific failure 
 - Most market-intelligence vendors treat source lists as proprietary.
 - Analysts cannot tell if the tool covers the regulator that matters for their client.
 
-**Bureau response.** Each vertical&rsquo;s full source list is published at the start of every subscription and updated quarterly. If we drop a source, the changelog says why.
+**Annotedly response.** Each vertical&rsquo;s full source list is published at the start of every subscription and updated quarterly. If we drop a source, the changelog says why.
 
 ## 6. Methodology opacity
 
@@ -64,4 +64,4 @@ Six pain points the target persona has *today*, each tied to a specific failure 
 - LLM-based summarizers do not reliably show which document grounded which claim.
 - &ldquo;Trust the model&rdquo; is not a defensible position in front of a regulator-facing client.
 
-**Bureau response.** Public methodology page. Every claim → numbered footnote → dossier-ID → primary source URL. Editorial triage is human-in-loop and named (initials in the changelog).
+**Annotedly response.** Public methodology page. Every claim → numbered footnote → dossier-ID → primary source URL. Editorial triage is human-in-loop and named (initials in the changelog).

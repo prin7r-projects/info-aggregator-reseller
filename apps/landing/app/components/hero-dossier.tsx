@@ -31,7 +31,7 @@ export function HeroDossier() {
 
             <div className="dossier-body font-serif text-[18px] leading-[1.6] text-ink-2 max-w-[58ch] space-y-5">
               <p>
-                Each Friday, Bureau ships a dossier on a single regulated vertical. The
+                Each Friday, Annotedly ships a dossier on a single regulated vertical. The
                 fintech edition this week tracks the FDIC&rsquo;s revised brokered-deposit
                 rule
                 <sup className="fn">[1]</sup>, three OCC stablecoin no-objection letters

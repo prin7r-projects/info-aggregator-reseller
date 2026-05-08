@@ -1,11 +1,11 @@
-# Bureau — info-aggregator-reseller
+# Annotedly — info-aggregator-reseller
 
 > Footnoted intelligence. Reseller-ready. A weekly cross-source dossier per vertical (fintech, biotech, govtech, climate-tech, semiconductors). White-labeled for consultancies and partner firms who resell to their own clients.
 
 - **Live landing:** https://info-aggregator-reseller.prin7r.com
 - **Notion opportunity:** https://www.notion.so/3543ceec261981bda092d21603052ab3
 - **Stack:** Next.js 15 (App Router) + Tailwind v4 + ShadCN baseline + NOWPayments hosted invoice
-- **Brand:** Bureau — milky paper (`#FAFAF8`), ink (`#0E0F12`), oxblood (`#7A1F2B`). Source Serif 4 + Inter + JetBrains Mono.
+- **Brand:** Annotedly — milky paper (`#FAFAF8`), ink (`#0E0F12`), oxblood (`#7A1F2B`). Source Serif 4 + Inter + JetBrains Mono.
 
 ## Repo structure
 
@@ -64,9 +64,9 @@ Three plans are wired on the landing — `single` ($499/vertical/mo), `bundle` (
 
 ## Screenshots
 
-![Bureau — desktop](docs/screenshots/landing-desktop.png)
+![Annotedly — desktop](docs/screenshots/landing-desktop.png)
 
-![Bureau — mobile](docs/screenshots/landing-mobile.png)
+![Annotedly — mobile](docs/screenshots/landing-mobile.png)
 
 ## License
 

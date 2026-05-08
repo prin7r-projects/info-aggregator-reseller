@@ -14,10 +14,10 @@ export function Masthead() {
   return (
     <header className="sticky top-0 z-40 bg-ink text-paper">
       <div className="mx-auto flex max-w-page items-center justify-between gap-6 px-6 py-3 md:py-4">
-        <a href="#" className="flex items-baseline gap-3" aria-label="Bureau home">
-          <span className="text-paper font-sans text-[18px] font-bold tracking-[-0.01em]">BUREAU</span>
+        <a href="#" className="flex items-baseline gap-3" aria-label="Annotedly home">
+          <span className="text-paper font-sans text-[18px] font-bold tracking-[-0.01em]">ANNOTEDLY</span>
           <span className="hidden md:inline font-mono text-[11px] uppercase tracking-[0.18em] text-paper/60">
-            § B-2026-W19
+            § An-2026-W19
           </span>
         </a>
         <nav className="hidden md:flex items-center gap-6 font-sans text-[13px] text-paper/80">

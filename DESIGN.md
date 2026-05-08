@@ -1,4 +1,4 @@
-# DESIGN.md — Bureau (info-aggregator-reseller)
+# DESIGN.md — Annotedly (info-aggregator-reseller)
 
 > The research-syndicate house style. Milky-paper canvas, ink type, a single oxblood accent, word-level underlines for emphasis, hairline rules, mono source-IDs. Editorial authority that resellers can co-brand without losing their own voice.
 
@@ -6,11 +6,11 @@
 
 ## 1. Product and audience
 
-**Product.** Bureau is a curated cross-source intelligence service. Each subscription is a single vertical (fintech regulations, biotech grants, govtech procurement, climate-tech disclosures, semiconductor export controls). A Bureau analyst-agent ingests 40–120 public + paywalled feeds per vertical, deduplicates, footnotes every claim, and ships a weekly digest plus a JSON/CSV feed and an inbox-ready summary. Resellers buy a license, white-label the surface (logo + accent + footer), and resell to their own clients.
+**Product.** Annotedly is a curated cross-source intelligence service. Each subscription is a single vertical (fintech regulations, biotech grants, govtech procurement, climate-tech disclosures, semiconductor export controls). A Annotedly analyst-agent ingests 40–120 public + paywalled feeds per vertical, deduplicates, footnotes every claim, and ships a weekly digest plus a JSON/CSV feed and an inbox-ready summary. Resellers buy a license, white-label the surface (logo + accent + footer), and resell to their own clients.
 
 **Audience.**
 - *Primary — vertical analyst at a boutique consultancy.* 6–40 person firm. Already writes weekly notes for 5–30 paying clients. Time-starved, sourcing-paranoid, footnote-obsessed. Wants raw evidence, not generated summaries.
-- *Secondary — partnerships lead at a mid-market SaaS vendor.* Already runs a "trends" newsletter for top accounts. Wants to syndicate Bureau under their masthead so the newsletter feels less promotional.
+- *Secondary — partnerships lead at a mid-market SaaS vendor.* Already runs a "trends" newsletter for top accounts. Wants to syndicate Annotedly under their masthead so the newsletter feels less promotional.
 - *Anti-persona — generic SMB content marketer chasing AI hype.* Will not pay $1,200/mo for evidence-grade work; will pay $29 for a ChatGPT wrapper. Send them away politely.
 
 **Voice tagline.** *Footnoted intelligence. Reseller-ready.*
@@ -27,7 +27,7 @@
 ## 3. ShadCN baseline and local component policy
 
 - Default UI primitive set: **shadcn/ui** (Radix + Tailwind). Add via `pnpm dlx shadcn@latest add <component>` only when needed — the Wave 2 landing intentionally avoids most ShadCN chrome and is hand-authored typography + hairlines.
-- For Bureau, only `Button` is vendored (`apps/landing/app/components/ui/button.tsx`) and re-themed against the Bureau tokens (square edges, ink fill, hairline border, no shadow). The full ShadCN registry stays available for the SaaS app under `apps/app/`.
+- For Annotedly, only `Button` is vendored (`apps/landing/app/components/ui/button.tsx`) and re-themed against the Annotedly tokens (square edges, ink fill, hairline border, no shadow). The full ShadCN registry stays available for the SaaS app under `apps/app/`.
 - **Local components live at** `apps/landing/app/components/` and are owned by this repo. No paid/pro libraries.
 - **Exceptions:** none. Anything that drifts from ShadCN conventions in the future must be logged in the changelog (§15) and cite a reason.
 
@@ -60,7 +60,7 @@
 
 **Weights used:** Source Serif 400 / 600. Inter 400 / 500 / 600 / 700. JetBrains Mono 400 / 500.
 
-**Type scale (Bureau):**
+**Type scale (Annotedly):**
 
 | Role | Family / Weight | Size | Line-height | Tracking |
 |---|---|---|---|---|
@@ -96,10 +96,10 @@
 
 ## 8. Component catalog
 
-- **Masthead bar.** Full-bleed `--ink` strip. Left: wordmark `BUREAU` (Inter 700) + dossier-number stamp (`§ B-2026-05`) in JetBrains Mono / 500. Center: nav links (Coverage / Resellers / Pricing / FAQ). Right: `Open file` (oxblood-bordered ghost button). Bottom edge: 1px `--rule-soft` line that becomes 1px `--oxblood` after 16px scroll.
+- **Masthead bar.** Full-bleed `--ink` strip. Left: wordmark `ANNOTEDLY` (Inter 700) + dossier-number stamp (`§ An-2026-05`) in JetBrains Mono / 500. Center: nav links (Coverage / Resellers / Pricing / FAQ). Right: `Open file` (oxblood-bordered ghost button). Bottom edge: 1px `--rule-soft` line that becomes 1px `--oxblood` after 16px scroll.
 - **Hero dossier.** Two-column desktop. Left 7/12: a real digest excerpt rendered as if scanned from a printed brief — display headline with two underlined nouns, lead paragraph, source-IDs in mono, footnote markers, 2-column footnote ledger at bottom. Right 5/12: dateline, vertical badge, three-line "what's in this issue", primary CTA + secondary "Sample digest →".
 - **Vertical coverage strip.** Five cells in a 5-col grid (desktop), two-col on mobile. Each cell: vertical name in serif, source-count in mono, three sample dossier-IDs as tracking-spaced labels. Cells separated by 1px `--rule-soft` only — no fill.
-- **Reseller co-brand mockup.** Two side-by-side dossier-thumbnail mockups: left "Bureau house masthead", right "Reseller masthead — *Atelier Northrop*" with a custom logo + accent. Caption explains that the body content is identical; only masthead/accent/footer change.
+- **Reseller co-brand mockup.** Two side-by-side dossier-thumbnail mockups: left "Annotedly house masthead", right "Reseller masthead — *Atelier Northrop*" with a custom logo + accent. Caption explains that the body content is identical; only masthead/accent/footer change.
 - **Pricing — three tiers.** Single-vertical / Bundle / Reseller-license. Cards on `--paper-2`, hairline border, single oxblood underline on the active price. NOWPayments crypto CTA on each tier. Beneath each: 4-line feature list in mono.
 - **FAQ.** 6-row accordion, hairline-divided rows, no chevron animation — just rotated `+` glyph.
 - **Footer.** Three columns + bottom rule. Mono colophon line ("Set in Source Serif 4 · Inter · JetBrains Mono. Rendered for Wave 2.")
@@ -109,14 +109,14 @@
 In source order, with the marketing strategy (`docs/08-marketing-strategy.md`) as the brief:
 
 1. **Masthead bar** (sticky).
-2. **Hero dossier** — Bureau digest excerpt with footnotes, source-IDs, and underlined emphasis nouns. Eyebrow reads `ISSUE 2026-W19 · FINTECH DOSSIER · 24 SOURCES`.
+2. **Hero dossier** — Annotedly digest excerpt with footnotes, source-IDs, and underlined emphasis nouns. Eyebrow reads `ISSUE 2026-W19 · FINTECH DOSSIER · 24 SOURCES`.
 3. **Vertical coverage strip** — fintech / biotech / govtech / climate-tech / semiconductors. Source-counts and sample dossier-IDs.
 4. **What's inside an issue** — 4-step diagram (Crawl → Dedupe → Footnote → Ship). Mono numerals, hairline rules, no icons.
-5. **Reseller co-brand mockup** — Bureau house vs. reseller masthead, side by side. Caption explains scope of customization.
+5. **Reseller co-brand mockup** — Annotedly house vs. reseller masthead, side by side. Caption explains scope of customization.
 6. **Pricing** — Single-vertical $499 / Bundle $1,499 / Reseller-license $4,800 setup + $1,200 per added vertical/mo. NOWPayments crypto CTA on each.
 7. **Methodology pull-quote** — short editorial statement on sourcing, deduplication, and footnoting policy. Set in Source Serif 4 / 32px.
 8. **FAQ** — 6 questions. Sourcing, refunds, white-label scope, vertical roadmap, cancellation, KYC.
-9. **Footer** — three columns (Coverage / Resellers / Bureau), legal hairline, mono colophon.
+9. **Footer** — three columns (Coverage / Resellers / Annotedly), legal hairline, mono colophon.
 
 No carousel. No animated mesh background. No hero photograph.
 
@@ -165,4 +165,5 @@ Both screenshots are committed to the repo and embedded in `README.md`.
 
 ## 15. Changelog
 
-- **2026-05-08 — initial Wave 2 build.** Bureau brand identity established. Landing built end-to-end with the hero-dossier, coverage strip, reseller mockup, three-tier pricing with NOWPayments hosted-invoice CTA, FAQ, and editorial footer. ShadCN Button vendored and re-themed. No raster imagery. Quality gates pass.
+- **2026-05-08 — initial Wave 2 build.** Annotedly brand identity established. Landing built end-to-end with the hero-dossier, coverage strip, reseller mockup, three-tier pricing with NOWPayments hosted-invoice CTA, FAQ, and editorial footer. ShadCN Button vendored and re-themed. No raster imagery. Quality gates pass.
+- **2026-05-08 critical rebrand — Bureau → Annotedly (FAIL on live bureau.id collision)**. Original codename "Bureau" collided with `bureau.id`, an active Framer-built fraud-prevention / identity-decisioning SaaS with real GTM tracking. Renamed brand → **Annotedly** (new domain `annotedly.com`, verified available; brand essence: "annotated digests with citations"). Wordmark + monogram swapped (`B` → `An`); seal stamp text in §1 logo SVG updated. All `B-` brand-prefix dossier IDs migrated to `An-`: `B-2026-W19` → `An-2026-W19`, `B-SRC-26` → `An-SRC-26`, `B-COV-26-V1` / `B-METH-26` / `B-WL-26` / `B-PRC-26` / `B-FAQ-26` / `B-DECK-26` → `An-*`. Reseller-mockup customer initial ID `AN-2026-W19` (Atelier Northrop) re-keyed to `ATN-2026-W19` to avoid collision with the new Annotedly monogram. Debug log tags `[BUREAU_PAYMENT_DEBUG]` / `[BUREAU_NOWPAYMENTS_WEBHOOK]` → `[ANNOTEDLY_*]`. Checkout `orderId` prefix `bureau-` → `annotedly-`. The single legitimate "Consumer Financial Protection Bureau" reference (a real US regulator) is preserved. Container/repo slug `info-aggregator-reseller` unchanged. Touched files: `apps/landing/app/{layout.tsx,components/{masthead,footer,hero-dossier,reseller-mockup,coverage-strip,inside-an-issue,methodology,pricing,faq,ui/button}.tsx,api/{checkout,webhooks}/nowpayments/route.ts}`, `docs/01..13`, `docs/pitch-deck.html`, `README.md`, `apps/app/README.md`, `DESIGN.md`.

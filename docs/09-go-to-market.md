@@ -8,12 +8,12 @@ A 90-day plan covering launch through first six paying subscribers and first res
 - [ ] Sample of the prior-week dossier prepared (fintech vertical) — PDF + email-template version.
 - [ ] Source list for fintech vertical drafted (40-60 feeds).
 - [ ] Direct-outreach target list assembled: 30 boutique consultancies + 10 vertical-SaaS partnerships leads = 40 named accounts.
-- [ ] Methodology essay drafted: *&ldquo;Why every paragraph in Bureau ships with a source-ID.&rdquo;*
+- [ ] Methodology essay drafted: *&ldquo;Why every paragraph in Annotedly ships with a source-ID.&rdquo;*
 - [ ] LinkedIn editorial-desk profile updated.
 
 ## Week 1 — public launch
 
-- Mon: methodology essay published on Substack and the Bureau site.
+- Mon: methodology essay published on Substack and the Annotedly site.
 - Tue: LinkedIn long-form post: *&ldquo;What we deduplicated this week — fintech edition.&rdquo;*
 - Wed: first wave of 10 direct-outreach emails to the named-account list. Hand-written, references the recipient&rsquo;s last published note.
 - Thu: editorial desk monitors inbox for sample-dossier requests.
@@ -32,7 +32,7 @@ A 90-day plan covering launch through first six paying subscribers and first res
 
 ## Week 3 — reseller seed
 
-- Mon: third LinkedIn long-form: *&ldquo;What a Bureau footnote ledger looks like.&rdquo;*
+- Mon: third LinkedIn long-form: *&ldquo;What a Annotedly footnote ledger looks like.&rdquo;*
 - Tue: third batch of 10 outreach. Includes 5 vertical-SaaS partnerships leads (Ravi-tier).
 - Thu: first reseller call (20 min). If positive, send sample co-branded dossier.
 - Fri: third issue.

@@ -1,8 +1,8 @@
 # 11 — User Stories and Scenarios
 
-This document is the canonical input contract for Bureau's Phase 2 SaaS implementation. It enumerates personas, primary user stories, end-to-end scenarios, and ties each flow to the frontend touch-points and backend services that doc 12 specifies. Every API endpoint in doc 12 must trace back to a story here; no orphan endpoints, no orphan stories.
+This document is the canonical input contract for Annotedly's Phase 2 SaaS implementation. It enumerates personas, primary user stories, end-to-end scenarios, and ties each flow to the frontend touch-points and backend services that doc 12 specifies. Every API endpoint in doc 12 must trace back to a story here; no orphan endpoints, no orphan stories.
 
-Bureau is a **vertical-intelligence subscription** — a footnoted, white-labelable Friday 09:00 ET dossier covering one or more regulated verticals (fintech, biotech, govtech, climate-tech, semis), with an editorially-curated source list, dedupe ratio, and per-paragraph source-IDs. Three tiers: Single ($499/mo), Bundle ($1,499/mo), Reseller-license ($4,800 setup + $1,200/vertical/mo).
+Annotedly is a **vertical-intelligence subscription** — a footnoted, white-labelable Friday 09:00 ET dossier covering one or more regulated verticals (fintech, biotech, govtech, climate-tech, semis), with an editorially-curated source list, dedupe ratio, and per-paragraph source-IDs. Three tiers: Single ($499/mo), Bundle ($1,499/mo), Reseller-license ($4,800 setup + $1,200/vertical/mo).
 
 ---
 
@@ -38,7 +38,7 @@ Solo content marketer chasing AI hype, generic SMB founder, Tier-1 bank complian
 6. **As Daniela, I want Bundle ($1,499/mo, all 5 verticals) with a quarterly editorial review call, so that the editorial desk can prioritize cross-vertical anchors my firm cares about.** *(US-06)*
 7. **As Ravi, I want a Reseller-license that lets me re-masthead the dossier with my brand (logo, accent color, footer line, custom URL), so that my account list reads my newsletter as editorial, not as a syndicate.** *(US-07)*
 8. **As Ravi, I want my dossier delivered to my custom delivery endpoint at Friday 09:00 ET + a configurable lag, so that I can stage my own send.** *(US-08)*
-9. **As Ravi, I want a co-branded methodology page that points to Bureau's back-end without naming it, so that my brand owns the editorial appearance.** *(US-09)*
+9. **As Ravi, I want a co-branded methodology page that points to Annotedly's back-end without naming it, so that my brand owns the editorial appearance.** *(US-09)*
 10. **As any subscriber, I want a per-subscriber JSON + CSV feed at a private endpoint, so that I can pull the issue into my own analytics tooling without screen-scraping.** *(US-10)*
 11. **As any subscriber, I want a documented leak-provenance policy + comment-from-subject mechanism on every leaked document, so that I'm protected from publishing unverified leaks.** *(US-11)*
 12. **As any subscriber, I want to cancel monthly without lock-in, so that I'm not stuck if the editorial quality slips.** *(US-12)*
@@ -49,7 +49,7 @@ Solo content marketer chasing AI hype, generic SMB founder, Tier-1 bank complian
 
 ### Scenario 1 — Mireille requests sample → subscribes Single
 
-**Trigger.** Mireille reads a tweet from a Brussels peer recommending Bureau. Lands on `https://info-aggregator-reseller.prin7r.com`.
+**Trigger.** Mireille reads a tweet from a Brussels peer recommending Annotedly. Lands on `https://info-aggregator-reseller.prin7r.com`.
 
 **Steps.**
 1. Reads the masthead. The hero shows a real dossier excerpt with footnotes. *Frontend: `Masthead`, `DossierExcerpt` on `apps/landing/app/page.tsx`.*
@@ -89,7 +89,7 @@ Solo content marketer chasing AI hype, generic SMB founder, Tier-1 bank complian
 
 **Steps.**
 1. Lands at scheduling form `/api/concierge/reseller`. Books 30-min call.
-2. Editorial desk lead joins. Scopes: 3 verticals (fintech + climate + semis), launch issue date 30 days out, accent color #2A4D6F, masthead "ECO Dispatch", footer line "Powered by Acme Bureau Partners."
+2. Editorial desk lead joins. Scopes: 3 verticals (fintech + climate + semis), launch issue date 30 days out, accent color #2A4D6F, masthead "ECO Dispatch", footer line "Powered by Acme Annotedly Partners."
 3. Desk issues a custom invoice via `POST /api/admin/reseller-licenses` with `{ resellerName, verticals, accentHex, masthead, footerLine, deliveryUrl, deliveryLagMin, customDomain }`. Returns NOWPayments hosted invoice for $4,800 setup + first month $3,600 (3 verticals × $1,200).
 4. Ravi pays. IPN fires. Reseller config persisted.
 5. 30 days later: first co-branded issue rendered for "ECO Dispatch" + delivered to Ravi's endpoint at Fri 09:00 ET + 30 min lag.
@@ -111,7 +111,7 @@ Solo content marketer chasing AI hype, generic SMB founder, Tier-1 bank complian
 
 ### Scenario 5 — Subject of a leak submits a comment
 
-**Trigger.** Bureau's editorial desk receives a leaked memo from a regulator beat reporter Wed 17:00. Provenance verified.
+**Trigger.** Annotedly's editorial desk receives a leaked memo from a regulator beat reporter Wed 17:00. Provenance verified.
 
 **Steps.**
 1. Editorial desk emails the memo's subject (the named firm) Wed 18:00 with: "We intend to publish this leak Friday. You may submit a comment we cite alongside."
@@ -125,8 +125,8 @@ Solo content marketer chasing AI hype, generic SMB founder, Tier-1 bank complian
 **Trigger.** Mireille's partner asks "where did this number come from?" during Friday 11:00 review.
 
 **Steps.**
-1. Mireille clicks the source-ID `[B-2026-W19-§14]` on the dossier paragraph.
-2. Browser opens `/dossier/B-2026-W19-§14`. Renders the original source link, retrieval timestamp, source version, dedupe rationale.
+1. Mireille clicks the source-ID `[An-2026-W19-§14]` on the dossier paragraph.
+2. Browser opens `/dossier/An-2026-W19-§14`. Renders the original source link, retrieval timestamp, source version, dedupe rationale.
 3. Partner reviews. Asks for the underlying Federal Register PDF. Mireille clicks deep-link → opens FR page directly.
 
 **Success criteria.** Audit trail accessible in <30s. Primary source deep-linked.
@@ -153,7 +153,7 @@ If a source is deleted between Sun 17:00 freeze and Fri 09:00 publish, the dossi
 
 ### EC-5 — Reseller delivery endpoint fails
 
-If reseller's delivery endpoint returns 5xx, Bureau retries 3x with exp-backoff. On persistent failure, ping the reseller via Slack or email.
+If reseller's delivery endpoint returns 5xx, Annotedly retries 3x with exp-backoff. On persistent failure, ping the reseller via Slack or email.
 
 ### EC-6 — Subscriber feed endpoint scraped by an unauthorized party
 
@@ -185,7 +185,7 @@ Quote and footnote, never paraphrase. Implementation must NOT have a "summarize 
 
 ### AS-5 — No SOC 2 / regulated-use certification
 
-Anti-persona (Tier-1 bank compliance officer). Bureau will tell them so on email.
+Anti-persona (Tier-1 bank compliance officer). Annotedly will tell them so on email.
 
 ### AS-6 — No public scraping endpoints
 

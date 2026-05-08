@@ -5,7 +5,7 @@ import { useState } from "react";
 const items = [
   {
     q: "How exactly does the white-label work?",
-    a: "On a Reseller-license, you give us a wordmark, an accent hex, a logo SVG (optional), an email-from address, and a URL where the dossier should live. We render two copies of every issue — Bureau house, and your edition with those swapped in. Body, footnotes, and source-IDs are byte-identical. Your clients never see Bureau anywhere unless you opt-in to a co-branded methodology page.",
+    a: "On a Reseller-license, you give us a wordmark, an accent hex, a logo SVG (optional), an email-from address, and a URL where the dossier should live. We render two copies of every issue — Annotedly house, and your edition with those swapped in. Body, footnotes, and source-IDs are byte-identical. Your clients never see Annotedly anywhere unless you opt-in to a co-branded methodology page.",
   },
   {
     q: "Where do the sources come from?",
@@ -39,7 +39,7 @@ export function Faq() {
             FAQ — six questions
           </h2>
           <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-            B-FAQ-26
+            An-FAQ-26
           </span>
         </div>
 

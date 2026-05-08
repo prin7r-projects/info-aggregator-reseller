@@ -47,16 +47,16 @@ These are people who will land on the site and bounce. We want them to bounce �
 
 1. **Solo content marketer chasing AI hype.** Wants a $29/mo ChatGPT-wrapper newsletter generator. Will balk at $499 entry and crypto-only checkout. Bounce desired.
 2. **Generic SMB founder.** Curious tourist; not a buyer.
-3. **Compliance officer at a Tier-1 bank.** Wants a feed certified for regulated use. Bureau is not yet at that compliance bar; we will tell them so on email.
-4. **Crypto trader looking for fintech alpha.** Wrong audience — Bureau covers fintech *regulations*, not market-moving signals. Bounce desired.
-5. **Adversarial scrapers.** Bureau publishes for paying subscribers; the JSON feed is per-subscriber and rate-limited.
+3. **Compliance officer at a Tier-1 bank.** Wants a feed certified for regulated use. Annotedly is not yet at that compliance bar; we will tell them so on email.
+4. **Crypto trader looking for fintech alpha.** Wrong audience — Annotedly covers fintech *regulations*, not market-moving signals. Bounce desired.
+5. **Adversarial scrapers.** Annotedly publishes for paying subscribers; the JSON feed is per-subscriber and rate-limited.
 
 ## Source channels
 
-How the audience will find Bureau:
+How the audience will find Annotedly:
 - LinkedIn long-form posts from the editorial desk (one per fortnight).
 - Substack cross-postings of methodology essays.
-- Reseller co-marketing — every reseller gives Bureau implicit reach to their distribution list.
+- Reseller co-marketing — every reseller gives Annotedly implicit reach to their distribution list.
 - Direct outreach to 200 named consultancies (a curated list, not a spray).
 - Coverage by analyst-of-analysts publications (Stratechery, B2B Times, regulator beat reporters).
 

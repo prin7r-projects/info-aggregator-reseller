@@ -1,7 +1,7 @@
 import * as React from "react";
 
 /**
- * Bureau Button — vendored from shadcn/ui then re-themed against Bureau tokens
+ * Annotedly Button — vendored from shadcn/ui then re-themed against Annotedly tokens
  * (square edges, ink fill, hairline border, no shadow). The marketing landing
  * mostly uses anchor-styled CTAs hand-authored inside section components; this
  * component is here so the SaaS app under /apps/app/ has the same primitive

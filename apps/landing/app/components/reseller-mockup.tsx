@@ -7,7 +7,7 @@ export function ResellerMockup() {
             White-label — what you change, what we hold
           </h2>
           <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-soft">
-            B-WL-26
+            An-WL-26
           </span>
         </div>
 
@@ -19,7 +19,7 @@ export function ResellerMockup() {
           <p className="font-sans text-[16px] leading-[1.55] text-ink-2">
             Reseller-license clients ship the same dossier we ship — under their own
             masthead, with their accent, their logo, and their footer line. We
-            pre-render two copies per issue: one for the Bureau house edition, one
+            pre-render two copies per issue: one for the Annotedly house edition, one
             keyed to the reseller&rsquo;s style sheet. The body, the citations, and the
             dossier-IDs are byte-identical.
           </p>
@@ -28,17 +28,17 @@ export function ResellerMockup() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <DossierThumb
             label="House masthead"
-            mastheadName="BUREAU"
-            mastheadId="§ B-2026-W19"
+            mastheadName="ANNOTEDLY"
+            mastheadId="§ An-2026-W19"
             accent="oxblood"
-            footerLine="Bureau · Set in Source Serif 4 · Issued under house sourcing standard B-SRC-26."
+            footerLine="Annotedly · Set in Source Serif 4 · Issued under house sourcing standard An-SRC-26."
           />
           <DossierThumb
             label="Reseller masthead — Atelier Northrop"
             mastheadName="ATELIER NORTHROP"
-            mastheadId="§ AN-2026-W19"
+            mastheadId="§ ATN-2026-W19"
             accent="forest"
-            footerLine="Atelier Northrop, Brussels · Distributed to AN private-client list · Sourced via Bureau B-SRC-26."
+            footerLine="Atelier Northrop, Brussels · Distributed to ATN private-client list · Sourced via Annotedly An-SRC-26."
           />
         </div>
 
