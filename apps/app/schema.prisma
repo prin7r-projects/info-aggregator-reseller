@@ -109,3 +109,98 @@ model ContactFormMessage {
   isRead                    Boolean         @default(false)
   repliedAt                 DateTime?
 }
+
+// ============================================================================
+// Annotedly Domain Schema (Phase 1.1 - PRI-2454)
+// Based on docs/12 §2.2 Technical Specification
+// ============================================================================
+
+model Subscriber {
+  id                        String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  email                     String          @unique
+  firmName                  String?         @map("firm_name")
+  createdAt                 DateTime        @default(now()) @map("created_at")
+
+  subscriptions             Subscription[]
+
+  @@map("subscribers")
+}
+
+model Subscription {
+  id                        String          @id // 'annotedly_single_<ts>_<rand>'
+  subscriberId              String          @map("subscriber_id") @db.Uuid
+  tier                      String          // 'single'|'bundle'|'reseller'
+  vertical                  String?         // for 'single' tier
+  resellerConfigId          String?         @map("reseller_config_id") @db.Uuid
+  status                    String          @default("pending") // 'pending'|'active'|'cancelled'|'paused'
+  invoiceId                 String?         @map("invoice_id")
+  validUntil                DateTime?       @map("valid_until")
+  feedToken                 String?         @unique @map("feed_token")
+  trackedLogUntil           DateTime?       @map("tracked_log_until") // 3 weeks from start
+  createdAt                 DateTime        @default(now()) @map("created_at")
+
+  subscriber                Subscriber      @relation(fields: [subscriberId], references: [id])
+  resellerConfig            ResellerConfig? @relation(fields: [resellerConfigId], references: [id])
+
+  @@index([subscriberId, status], map: "subscriptions_subscriber_id_status_idx")
+  @@map("subscriptions")
+}
+
+model Issue {
+  id                        String          @id // 'An-2026-W19-fintech'
+  vertical                  String
+  weekStart                 DateTime        @map("week_start") @db.Date
+  publishedAt               DateTime?       @map("published_at")
+  inputCount                Int?            @map("input_count")
+  outputCount               Int?            @map("output_count")
+  dedupeRatio               Decimal?        @map("dedupe_ratio") @db.Decimal(6, 2)
+
+  dossierItems              DossierItem[]
+
+  @@map("issues")
+}
+
+model Source {
+  id                        String          @id // 'src-fintech-fed-2026-04-12'
+  url                       String
+  retrievedAt               DateTime?       @map("retrieved_at")
+  sha256                    String
+  contentType               String?         @map("content_type")
+  isLeak                    Boolean         @default(false) @map("is_leak")
+  leakProvenance            Json?           @map("leak_provenance")
+
+  dossierItems              DossierItem[]
+
+  @@map("sources")
+}
+
+model DossierItem {
+  id                        String          @id // 'An-2026-W19-§14'
+  issueId                   String          @map("issue_id")
+  sourceId                  String          @map("source_id")
+  paragraphMarkdown         String          @map("paragraph_markdown")
+  footnoteRefs              Json            @default("[]") @map("footnote_refs")
+
+  issue                     Issue           @relation(fields: [issueId], references: [id])
+  source                    Source          @relation(fields: [sourceId], references: [id])
+
+  @@index([issueId], map: "dossier_items_issue_id_idx")
+  @@map("dossier_items")
+}
+
+model ResellerConfig {
+  id                        String          @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  resellerName              String          @map("reseller_name")
+  masthead                  String
+  accentHex                 String?         @map("accent_hex")
+  footerLine                String?         @map("footer_line")
+  deliveryUrl               String?         @map("delivery_url")
+  deliveryLagMin            Int             @default(0) @map("delivery_lag_min")
+  customDomain              String?         @map("custom_domain")
+  logoSvg                   String?         @map("logo_svg")
+  createdAt                 DateTime        @default(now()) @map("created_at")
+
+  subscriptions             Subscription[]
+
+  @@map("reseller_configs")
+}
