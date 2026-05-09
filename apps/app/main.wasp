@@ -1,4 +1,4 @@
-app OpenSaaS {
+app annotedly {
   wasp: {
     version: "^0.23.0"
   },

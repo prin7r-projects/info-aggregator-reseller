@@ -1,5 +1,5 @@
 {
-  "name": "opensaas",
+  "name": "annotedly",
   "type": "module",
   "workspaces": [
     ".wasp/out/*",
