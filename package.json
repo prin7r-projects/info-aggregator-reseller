@@ -5,7 +5,8 @@
   "description": "Annotedly — curated industry-data aggregator/reseller (monorepo)",
   "scripts": {
     "dev": "pnpm --recursive dev",
-    "build": "pnpm --recursive build"
+    "build": "pnpm --recursive build",
+    "validate:sources": "node scripts/validate-sources.mjs"
   },
   "engines": {
     "node": ">=20.0.0"
@@ -13,5 +14,9 @@
   "packageManager": "pnpm@9.15.4",
   "pnpm": {
     "onlyBuiltDependencies": []
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1"
   }
 }

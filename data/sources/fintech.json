@@ -1,0 +1,602 @@
+[
+  {
+    "id": "fed-press-all",
+    "name": "Federal Reserve — all press releases",
+    "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-press-monetary",
+    "name": "Federal Reserve — monetary policy press releases",
+    "url": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-press-bcreg",
+    "name": "Federal Reserve — banking supervision and regulation press releases",
+    "url": "https://www.federalreserve.gov/feeds/press_bcreg.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-press-enforcement",
+    "name": "Federal Reserve — enforcement actions",
+    "url": "https://www.federalreserve.gov/feeds/press_enforcement.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-press-orders",
+    "name": "Federal Reserve — orders on banking applications",
+    "url": "https://www.federalreserve.gov/feeds/press_orders.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-speeches",
+    "name": "Federal Reserve — speeches",
+    "url": "https://www.federalreserve.gov/feeds/speeches.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-testimony",
+    "name": "Federal Reserve — congressional testimony",
+    "url": "https://www.federalreserve.gov/feeds/testimony.xml",
+    "type": "rss",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-data-releases",
+    "name": "Federal Reserve — H.4.1, H.6, G.19 statistical releases",
+    "url": "https://www.federalreserve.gov/feeds/datadownload.xml",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-foia",
+    "name": "Federal Reserve — FOIA reading room updates",
+    "url": "https://www.federalreserve.gov/foia/readingrooms.htm",
+    "type": "http",
+    "cadence": "0 12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fed-consumer-affairs",
+    "name": "Federal Reserve — consumer-affairs press releases",
+    "url": "https://www.federalreserve.gov/feeds/press_other.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "occ-news",
+    "name": "OCC — news releases",
+    "url": "https://www.occ.treas.gov/rss/occ_news.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "occ-bulletins",
+    "name": "OCC — bulletins",
+    "url": "https://www.occ.treas.gov/rss/occ_bulletins.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "occ-enforcement",
+    "name": "OCC — enforcement actions search",
+    "url": "https://apps.occ.gov/EnforcementActions/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "occ-cra",
+    "name": "OCC — Community Reinvestment Act evaluations",
+    "url": "https://www.occ.treas.gov/topics/consumers-and-communities/cra/cra-evaluations.html",
+    "type": "http",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cfpb-newsroom",
+    "name": "CFPB — newsroom",
+    "url": "https://www.consumerfinance.gov/about-us/newsroom/feed/",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cfpb-enforcement",
+    "name": "CFPB — enforcement actions",
+    "url": "https://www.consumerfinance.gov/enforcement/actions/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cfpb-final-rules",
+    "name": "CFPB — final rules",
+    "url": "https://www.consumerfinance.gov/rules-policy/final-rules/",
+    "type": "http",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cfpb-blog",
+    "name": "CFPB — blog",
+    "url": "https://www.consumerfinance.gov/about-us/blog/feed/",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cfpb-research-reports",
+    "name": "CFPB — research reports",
+    "url": "https://www.consumerfinance.gov/data-research/research-reports/",
+    "type": "http",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cfpb-consumer-complaints",
+    "name": "CFPB — consumer complaint database",
+    "url": "https://www.consumerfinance.gov/data-research/consumer-complaints/search/api/v1/",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fdic-press-releases",
+    "name": "FDIC — press releases",
+    "url": "https://www.fdic.gov/news/press-releases/",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fdic-financial-institution-letters",
+    "name": "FDIC — Financial Institution Letters",
+    "url": "https://www.fdic.gov/news/financial-institution-letters/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fdic-enforcement-decisions",
+    "name": "FDIC — enforcement decisions and orders",
+    "url": "https://orders.fdic.gov/s/searchform",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fdic-failed-banks",
+    "name": "FDIC — failed bank list",
+    "url": "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/",
+    "type": "http",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-edgar-10k",
+    "name": "SEC EDGAR — 10-K filings (latest)",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-K&dateb=&owner=include&count=40&output=atom",
+    "type": "atom",
+    "cadence": "0 * * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-edgar-10q",
+    "name": "SEC EDGAR — 10-Q filings (latest)",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=10-Q&dateb=&owner=include&count=40&output=atom",
+    "type": "atom",
+    "cadence": "0 * * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-edgar-8k",
+    "name": "SEC EDGAR — 8-K filings (latest)",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=8-K&dateb=&owner=include&count=40&output=atom",
+    "type": "atom",
+    "cadence": "0 * * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-edgar-13f",
+    "name": "SEC EDGAR — 13F institutional holdings (latest)",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=13F&dateb=&owner=include&count=40&output=atom",
+    "type": "atom",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-edgar-s1",
+    "name": "SEC EDGAR — S-1 registration statements (latest)",
+    "url": "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&type=S-1&dateb=&owner=include&count=40&output=atom",
+    "type": "atom",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-press-releases",
+    "name": "SEC — press releases",
+    "url": "https://www.sec.gov/news/pressreleases.rss",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-litigation-releases",
+    "name": "SEC — litigation releases",
+    "url": "https://www.sec.gov/rss/litigation/litreleases.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-investor-alerts",
+    "name": "SEC — investor alerts and bulletins",
+    "url": "https://www.sec.gov/rss/investor/alerts.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-final-rules",
+    "name": "SEC — final rules",
+    "url": "https://www.sec.gov/rss/rules/final.xml",
+    "type": "rss",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-proposed-rules",
+    "name": "SEC — proposed rules",
+    "url": "https://www.sec.gov/rss/rules/proposed.xml",
+    "type": "rss",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "sec-administrative-proceedings",
+    "name": "SEC — administrative proceedings",
+    "url": "https://www.sec.gov/rss/litigation/admin.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "treasury-press-releases",
+    "name": "US Treasury — press releases",
+    "url": "https://home.treasury.gov/news/press-releases/feed",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "treasury-ofac-recent-actions",
+    "name": "US Treasury OFAC — recent sanctions actions",
+    "url": "https://ofac.treasury.gov/recent-actions",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fincen-news-releases",
+    "name": "FinCEN — news releases",
+    "url": "https://www.fincen.gov/news-room/news-releases",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "federal-register-banking",
+    "name": "Federal Register — banking and banking topic",
+    "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Btopics%5D%5B%5D=banking-and-banking",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "federal-register-securities",
+    "name": "Federal Register — securities topic",
+    "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Btopics%5D%5B%5D=securities",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "federal-register-credit",
+    "name": "Federal Register — credit topic",
+    "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Btopics%5D%5B%5D=credit",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "federal-register-currency",
+    "name": "Federal Register — currency topic",
+    "url": "https://www.federalregister.gov/api/v1/documents.rss?conditions%5Btopics%5D%5B%5D=currency",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cftc-press-releases",
+    "name": "CFTC — press releases",
+    "url": "https://www.cftc.gov/PressRoom/PressReleases",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cftc-enforcement-actions",
+    "name": "CFTC — enforcement actions",
+    "url": "https://www.cftc.gov/LawRegulation/Enforcement/EnforcementActions/index.htm",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "finra-news-releases",
+    "name": "FINRA — news releases",
+    "url": "https://www.finra.org/media-center/news-releases",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "finra-disciplinary-actions",
+    "name": "FINRA — monthly disciplinary actions",
+    "url": "https://www.finra.org/rules-guidance/oversight-enforcement/finra-disciplinary-actions-online",
+    "type": "http",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "ncua-news",
+    "name": "NCUA — news releases",
+    "url": "https://ncua.gov/newsroom/press-release",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "nydfs-press-releases",
+    "name": "NY Department of Financial Services — press releases",
+    "url": "https://www.dfs.ny.gov/reports_and_publications/press_releases",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "esma-news",
+    "name": "ESMA — news",
+    "url": "https://www.esma.europa.eu/rss.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "esma-press-releases",
+    "name": "ESMA — press releases",
+    "url": "https://www.esma.europa.eu/press-news/esma-news",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "eba-news",
+    "name": "European Banking Authority — news and press",
+    "url": "https://www.eba.europa.eu/news-press/news",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "ecb-press",
+    "name": "European Central Bank — press releases",
+    "url": "https://www.ecb.europa.eu/rss/press.html",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "ecb-monetary-policy",
+    "name": "European Central Bank — monetary policy decisions",
+    "url": "https://www.ecb.europa.eu/rss/mopo.html",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "bis-press-releases",
+    "name": "Bank for International Settlements — press releases",
+    "url": "https://www.bis.org/press_releases.rss",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "bis-speeches",
+    "name": "Bank for International Settlements — speeches",
+    "url": "https://www.bis.org/list/speeches/index.rss",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fsb-publications",
+    "name": "Financial Stability Board — publications",
+    "url": "https://www.fsb.org/feed/",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "imf-news",
+    "name": "International Monetary Fund — news",
+    "url": "https://www.imf.org/en/news/rss",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "world-bank-finance",
+    "name": "World Bank — finance and markets news",
+    "url": "https://www.worldbank.org/en/topic/financialsector",
+    "type": "http",
+    "cadence": "0 8 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fca-news",
+    "name": "UK Financial Conduct Authority — news",
+    "url": "https://www.fca.org.uk/news/rss.xml",
+    "type": "rss",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "fca-publications",
+    "name": "UK Financial Conduct Authority — publications",
+    "url": "https://www.fca.org.uk/publications/rss.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "boe-news",
+    "name": "Bank of England — news",
+    "url": "https://www.bankofengland.co.uk/news",
+    "type": "http",
+    "cadence": "0 */6 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "pra-publications",
+    "name": "UK Prudential Regulation Authority — publications",
+    "url": "https://www.bankofengland.co.uk/prudential-regulation/publication",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "finma-news",
+    "name": "FINMA (Switzerland) — news",
+    "url": "https://www.finma.ch/en/news/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "bafin-news",
+    "name": "BaFin (Germany) — news",
+    "url": "https://www.bafin.de/EN/PublikationenDaten/News/news_node_en.html",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "amf-france-news",
+    "name": "AMF (France) — news",
+    "url": "https://www.amf-france.org/en/news-publications/news",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "consob-news",
+    "name": "CONSOB (Italy) — news and warnings",
+    "url": "https://www.consob.it/web/consob-and-its-activities/news",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "cssf-news",
+    "name": "CSSF (Luxembourg) — news",
+    "url": "https://www.cssf.lu/en/news/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "mas-singapore-news",
+    "name": "Monetary Authority of Singapore — news",
+    "url": "https://www.mas.gov.sg/news",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "hkma-press-releases",
+    "name": "Hong Kong Monetary Authority — press releases",
+    "url": "https://www.hkma.gov.hk/eng/news-and-media/press-releases/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "boj-news",
+    "name": "Bank of Japan — releases",
+    "url": "https://www.boj.or.jp/en/about/release_2025/index.htm",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "jfsa-news",
+    "name": "Japan Financial Services Agency — news",
+    "url": "https://www.fsa.go.jp/en/news/index.html",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "asic-news",
+    "name": "ASIC (Australia) — newsroom",
+    "url": "https://asic.gov.au/newsroom/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "rba-media-releases",
+    "name": "Reserve Bank of Australia — media releases",
+    "url": "https://www.rba.gov.au/rss/rss-cb-media-releases.xml",
+    "type": "rss",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "osfi-canada-news",
+    "name": "OSFI (Canada) — news",
+    "url": "https://www.osfi-bsif.gc.ca/en/news",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  },
+  {
+    "id": "boc-press-content",
+    "name": "Bank of Canada — press content",
+    "url": "https://www.bankofcanada.ca/press-content/",
+    "type": "http",
+    "cadence": "0 */12 * * *",
+    "vertical": "fintech"
+  }
+]

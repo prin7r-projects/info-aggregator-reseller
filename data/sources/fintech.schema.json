@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://annotedly.com/schema/sources/fintech.schema.json",
+  "title": "Annotedly fintech source list",
+  "description": "Array of curated public regulatory, supervisory, and macro-financial feed entries for the fintech vertical.",
+  "type": "array",
+  "minItems": 60,
+  "items": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["id", "name", "url", "type", "cadence", "vertical"],
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Stable kebab-case identifier, unique across the array.",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+        "minLength": 3,
+        "maxLength": 80
+      },
+      "name": {
+        "type": "string",
+        "description": "Human-readable feed name.",
+        "minLength": 3,
+        "maxLength": 200
+      },
+      "url": {
+        "type": "string",
+        "description": "Public URL of the feed (RSS/Atom) or landing/index page (http).",
+        "format": "uri",
+        "pattern": "^https?://"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["rss", "http", "atom"],
+        "description": "Feed transport. Use 'http' when the source has no public RSS/Atom and must be scraped or polled."
+      },
+      "cadence": {
+        "type": "string",
+        "description": "Five-field cron expression (minute hour day-of-month month day-of-week).",
+        "pattern": "^(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)$"
+      },
+      "vertical": {
+        "type": "string",
+        "enum": ["fintech"],
+        "description": "Vertical tag. Always 'fintech' in this file."
+      }
+    }
+  },
+  "uniqueItems": false
+}
