@@ -47,10 +47,12 @@
     "zod": "^4.3.6"
   },
   "devDependencies": {
-    "@faker-js/faker": "8.3.1",
+    "@faker-js/faker": "^8.3.1",
     "@tailwindcss/vite": "^4.1.18",
     "@types/express": "^5.0.0",
+    "@types/express-serve-static-core": "^5.0.0",
     "@types/react": "^19.2.7",
+    "@vitejs/plugin-react": "^4.7.0",
     "prisma": "5.19.1",
     "typescript": "5.9.3",
     "vite": "^7.0.6"
