@@ -88,14 +88,13 @@ app annotedly {
   },
 
   emailSender: {
-    // NOTE: "Dummy" provider is just for local development purposes.
-    //   Make sure to check the server logs for the email confirmation url (it will not be sent to an address)!
-    //   Once you are ready for production, switch to e.g. "SendGrid" or "Mailgun" providers. Check out https://docs.opensaas.sh/guides/email-sending/ .
-    provider: Dummy,
+    // SMTP is the default non-Dummy provider so production `wasp build` validation passes.
+    // SMTP_HOST / SMTP_USERNAME / SMTP_PASSWORD / SMTP_PORT are loaded from .env.server at runtime.
+    // For local dev you can set provider back to Dummy in a feature branch.
+    provider: SMTP,
     defaultFrom: {
-      name: "Open SaaS App",
-      // When using a real provider, e.g. SendGrid, you must use the same email address that you configured your account to send out emails with!
-      email: "me@example.com"
+      name: "Annotedly",
+      email: "noreply@annotedly.com"
     },
   },
 }
